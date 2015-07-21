@@ -1,16 +1,14 @@
 require "pchamp/version"
+require 'colorize'
 
 module Pchamp
-  class Champ
+  extend self
 
     def pc(response)
       if response.is_a? String
         format_string(response)
-      elsif response.is_a? Hash || response.is_a? Array || response.is_a? TrueClass || response.is_a? FalseClass || response.is_a? NilClass || response.is_a? Fixnum || response.is_a? Float
+      else
         format_data(response)
-      elsif
-
-
       end
     end
 
@@ -26,11 +24,4 @@ module Pchamp
       puts ('*' * 40).blue
     end
 
-    def
-
-
-
-
-
-  end
 end
